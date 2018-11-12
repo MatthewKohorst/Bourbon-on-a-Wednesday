@@ -1,0 +1,439 @@
+/*
+* BOURBON BLOG
+* Author:   Matthew Kohorst <mattkohorst@gmail.com>
+* Creation: October 2018
+*
+*/
+/* =================================================================
+variables
+================================================================= */
+/* =================================================================
+fonts
+================================================================= */
+
+@import url('https://fonts.googleapis.com/css?family=Ultra');
+@import url('https://fonts.googleapis.com/css?family=Vast+Shadow');
+@import url('https://fonts.googleapis.com/css?family=KoHo');
+
+
+
+/*----------------------------------------------------------------------
+			RESET
+----------------------------------------------------------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+		display: block;
+}
+
+ol, ul {
+		list-style: none;
+}
+
+blockquote, q {
+		quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after { 
+		content: '';
+		content: none;
+}
+
+table {
+		border-collapse: collapse;
+		border-spacing: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+}
+
+/*----------------------------------------------------------------------
+      GENERAL 
+----------------------------------------------------------------------*/
+
+.wrapper {
+    max-width: 775px;
+    margin: 0 auto;
+}
+ 
+
+.wrapper2 {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 10px;
+}
+
+p {
+  font-family: 'KoHo', sans-serif;
+  font-size: 18px;
+}
+
+/*----------------------------------------------------------------------
+			HEADER
+----------------------------------------------------------------------*/
+
+header {
+  background-size: 25px;
+  background-color: #FAFAD2;
+}
+
+ 
+/* Container holding the image and the text */
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+    background-image: url(../img/barrels-head.jpg);
+    padding-top: 30%;
+    background-size: cover;
+}
+
+/* Centered text */
+.headline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Ultra', serif;
+    color: #af6c3e;
+    font-size: 20px;
+    width: 100%;
+    text-shadow: -1px -1px 0 #FFD700, 
+                  3px -1px 0 #FFD700, 
+                  -1px 1px 0 #FFD700, 
+                  1px 1px 0 #FFD700;
+  }
+
+  @media only screen and (min-width: 700px) {
+    .headline {
+      font-size: 65px;
+    }
+  }
+
+h2 {
+  font-size: 45px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  font-family: 'Vast Shadow', cursive;
+  text-align: center;
+  color: #af6c3e;
+  text-shadow: -1px -1px 0 #FFD700, 
+                1px -1px 0 #FFD700, 
+                  -1px 1px 0 #FFD700, 
+                  1px 1px 0 #FFD700;
+}
+
+h3 {
+  font-size: 30px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  font-family: 'Vast Shadow', cursive;
+  text-align: center;
+  color: #af6c3e;
+  text-shadow: -1px -1px 0 #FFD700, 
+                1px -1px 0 #FFD700, 
+                  -1px 1px 0 #FFD700, 
+                  1px 1px 0 #FFD700;
+}
+
+h4 {
+  font-size: 25px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  font-family: 'Vast Shadow', cursive;
+  text-align: center;
+  color: #af6c3e;
+  text-shadow: -1px -1px 0 #FFD700, 
+                1px -1px 0 #FFD700, 
+                  -1px 1px 0 #FFD700, 
+                  1px 1px 0 #FFD700;
+}
+
+
+
+
+
+p.date-description {
+  font-size: 18px;
+}
+
+
+
+
+  /*----------------------------------------------------------------------
+      NAVIGATION
+----------------------------------------------------------------------*/
+.nav-button {
+    border: 0;
+    text-indent: -999em;
+    font-size: 0px;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    background-image: url('../img/menu.png');
+    background-size: cover;
+}
+
+@media only screen and (min-width: 700px) {
+    .nav-button {
+      display: none;
+
+  }
+}
+
+.topnav {
+  display: none;
+  padding: 2.5vh 0;
+  background-color: #af6c3e;
+}
+
+
+@media only screen and (min-width: 700px) {
+    .topnav {
+      display: block;
+  }
+}
+
+.nav ul > li:hover ul {
+    max-height:1000px;
+    -webkit-transform:perspective(400) rotate3d(0,0,0,0);
+}
+
+
+.topnav a {
+  font-size: 20px;
+  color: #FFD700;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #000;
+  width: 100%;
+    display: inline-block;
+    padding: 10px;
+}
+
+@media only screen and (min-width: 700px) {
+    .topnav a {
+      display: inline;
+    padding: 25px;
+  }
+}
+
+.topnav a:hover {
+  font-size: 20px;
+  color: #FFF;
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------
+      BLOGS
+----------------------------------------------------------------------*/
+
+#blogs {
+  background-color: #FAFAD2;
+
+}
+
+#blogs a {
+  position: relative;
+}
+
+#blogs p {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, .5);
+  font-size: 18px;
+  
+}
+
+#blogs li {
+    display: inline-block;
+    margin: 1.5em 0;
+    width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    #blogs li {
+      width: 49%;
+  }
+}
+
+section ul {
+  
+  text-align: justify;
+}
+
+section ul::after {
+  content: "";
+  width: 100%;
+  display: inline-block;
+}
+
+
+section li {
+  display: inline-block;
+  margin: 1.6rem;
+}
+
+#blogs img {
+
+  width: 100%;
+  border-radius: 5px;
+}
+
+/*----------------------------------------------------------------------
+      SECTION ABOUT
+----------------------------------------------------------------------*/
+
+#about {
+  background-color: #fff;
+  padding-bottom: 50px;
+}
+
+
+
+/*----------------------------------------------------------------------
+      SECTION SOCIAL
+----------------------------------------------------------------------*/
+
+#social {
+  background-color: #FAFAD2;
+
+}
+
+/*----------------------------------------------------------------------
+      SOCIAL ICONS
+----------------------------------------------------------------------*/
+
+#social img{
+  width: 65px;
+  height: 65px;
+
+}
+
+#social ul {
+  text-align: center;
+}
+
+#social a {
+  display: block;
+}
+
+#social li {
+    margin: 0 10px;
+}
+
+/*----------------------------------------------------------------------
+      BLOG-PAGE
+----------------------------------------------------------------------*/
+
+#blog1, 
+#blog3 {
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+#blog2, 
+#blog4 {
+  width: 100%;
+  background-color: #FAFAD2;
+}
+
+#blog-page li {
+    padding: 50px 0;
+}
+
+#blog-page li img {
+    margin: 30px;
+    display: inline-block;
+}
+
+#blog-page li p {
+    display: inline-block;
+    width: 41%;
+    vertical-align: top;
+    margin: 30px 0;
+}
+
+.main-image {
+  width: 400px;
+  height: 400px;
+  border-radius:10px;
+}
+
+#blog-page .oct17th-mini {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-top: 20px;
+}
+
+
+#blog-page .oct17th-mini img {
+ display: inline-block;
+ width: 75px;
+height: 75px;
+border-radius: 50%;
+
+}
+
+#blog-page .oct31st-mini {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-top: 20px;
+
+}
+
+
+#blog-page .oct31st-mini img {
+ display: inline-block;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+}
+
